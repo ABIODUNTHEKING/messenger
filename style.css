@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@1,300;1,600&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-color: #ffffff;
+}
+
+.searchform{
+    display: flex;
+    background-color: #f0f2f5;
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    gap: 5px;
+}
+
+.searchform input{
+    border: 0;
+    background-color: transparent;
+    outline: 0;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*HEADER
+-----------------------------------*/
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    padding: 0 20px;
+}
+
+header div{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+}
+
+.centeredLinks{
+    width: 40%;
+}
+
+.centeredLinks ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.centeredLinks ul li{
+    display: inline-block;
+}
+
+.centeredLinks ul li a{
+    color: #65676b;
+}
+
+.rightLinks{
+    width: 10%;
+}
+
+.rightLinks ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.rightLinks ul li{
+    display: block;
+}
+
+.rightLinks ul li:nth-child(2), .rightLinks ul li:nth-child(1){
+    background-color: #e4e6eb;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.rightLinks ul li a{
+    color: black;
+}
+
+.userImage{
+    height: 36px;
+    border-radius: 50%;
+}
+
+/*MAIN
+-------------------------------------------*/
+main{
+    display: flex;
+}
+
+.chatInfo{
+    border-right: 2px solid #e5e5e5;
+    padding: 10px;
+    width: 30%;
+}
+
+.pageTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pageTitle nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+    height: 100%;
+}
+
+.pageTitle nav ul li{
+    display: block;
+}
+
+.pageTitle nav ul li a{
+    color: black;
+}
+
+.pageTitle nav ul li{
+    background-color: #e4e6eb;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.chatInfo .searchform{
+    margin-bottom: 20px;
+}
+
+.inbox a:first-of-type{
+    color: #1877f2;
+    background-color: #e7f3ff;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.inbox a:last-of-type{
+    color: black;
+    margin: 0 10px;
+}
+
+
+.inbox{
+    margin-bottom: 20px;
+}
+
+.chatList{
+    height: 64.6vh;
+    overflow-y: scroll;
+    padding-right: 20px;
+}
+
+
+.friends{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    
+}
+
+.activeFriend{
+    background-color: #e7f3ff;   
+}
+
+.activeFriend:hover{
+    background-color: #e7f3ff;   
+}
+
+.friends:hover{
+    background-color: #e4e6eb;
+}
+
+.friends img{
+    border-radius: 50%;
+    
+}
+
+.active{
+    background-color: #31a24c;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: absolute;
+    left: 45px;
+}
+
+.friendName{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.friendMessage{
+    color: #65676b;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.chatBox{
+    width: 100%;
+}
+
+.contactInfo{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    height: 10vh;
+    padding: 0 20px;
+}
+
+.contactImage{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+.contactImage div p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.contactImage div span{
+    color: #65676b;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.contactEmoji ul{
+    display: flex;
+    align-items: center;
+    width: 10vw;
+    justify-content: space-between;
+    
+}
+
+.contactEmoji ul li{
+    display: block;
+    
+}
+
+.contactEmoji ul li a{
+    color: #0084ff;
+    font-size: 20px;
+}
+
+.message{
+    margin-top: 10px;
+    padding: 0 20px;
+    height: 70vh;
+    overflow-y: scroll;
+    
+}
+
+.receivedMessage{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+.receivedMessage p{
+    background-color: #e4e6eb;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+.sentMessage{
+    text-align: left;
+    max-width: 20%;
+    background-color: #0084ff;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    right: 0;
+    margin-left: 800px;
+}
+
+.textInput{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 8vh;
+    margin: 0 10px;
+}
+
+.attachment ul{
+    display: flex;
+    justify-content: space-between;
+    width: 14vw;
+}
+
+.attachment ul li{
+    list-style: none;
+}
+
+.attachment ul li a{
+    color: #0084ff;
+    list-style: none;
+    font-size: 20px;
+}
+
+.textInputBox{
+    width: 72%;
+}
+
+.textInputBox a{
+    color: #0084ff;
+    font-size: 25px;
+}
+
+.thumbsUp{
+    color: #0084ff;
+    font-size: 20px;
+}
+
+.time{
+    color: #65676b;
+    font-size: 12px;
+    text-align: center;
+}
+
