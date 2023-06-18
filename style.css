@@ -10,7 +10,9 @@
 
 body{
     background-color: #ffffff;
+    position: relative;
 }
+
 
 .searchform{
     display: flex;
@@ -30,6 +32,7 @@ body{
 
 a{
     text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -171,6 +174,9 @@ main{
     padding-right: 20px;
 }
 
+.chatList::-webkit-scrollbar{
+    display: none;
+}
 
 .friends{
     display: flex;
@@ -196,7 +202,8 @@ main{
 
 .friends img{
     border-radius: 50%;
-    
+    width: 50px;
+    height: 50px;
 }
 
 .active{
@@ -215,7 +222,7 @@ main{
 
 .friendMessage{
     color: #65676b;
-    font-size: 13px;
+    font-size: 10px;
     margin-top: 3px;
 }
 
@@ -276,6 +283,10 @@ main{
     height: 70vh;
     overflow-y: scroll;
     
+}
+
+.message::-webkit-scrollbar{
+    display: none;
 }
 
 .receivedMessage{
@@ -347,3 +358,169 @@ main{
     text-align: center;
 }
 
+.addUser, .deleteForm{
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(1px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: none;
+}
+
+ 
+.addUser form, .deleteForm > div{
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    width: 25rem;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.alert{
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: rgba(238, 100, 100, 0.5);
+    color: rgba(238, 100, 100, 0.5);
+    margin-bottom: 8px;
+}
+
+.deleteForm p{
+    color: #65676b;
+    font-size: 14px;
+}
+
+.deleteForm div div{
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cancel, .delete{
+    
+    width: 85px;
+    padding: 12px 0;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.delete{
+    background-color: rgb(252, 7, 7);
+}
+
+.cancel{
+    background-color: rgba(255, 255, 255, 0.438);
+}
+
+.delete:hover, .cancel:hover{
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+.deleteXmark{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e4e6eb;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.addUser button{
+    text-align: right;
+    border: 0;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 23%;
+    right: 36%;
+    z-index: 5;  
+}
+
+.addUser form h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+.addUser form input{
+    display: block;
+    outline: 0;
+    border: 1px solid #0084ff;
+    margin: 5px 0;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 10px;
+}
+ 
+.addUser input[type="submit"]{
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+    background-color: #0084ff;
+    color: white;
+    border: 1px solid #0084ff;
+}
+
+input[type="button"]{
+    cursor: pointer;
+}
+
+ 
+#selectedImage, .friendLastName, .friendFirstName{
+    display: none;
+}
+
+.friendImage{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 320px;
+    left: 150px;
+    overflow: hidden;
+    cursor: pointer;
+} 
+
+.hide{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
+
+.profileImage{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.camera{
+    position: absolute;
+    bottom: 10px;
+    right: 3px;
+    font-size: 20px;
+}
+
+.deleteButton{
+    display: none;
+}
+
+.error{
+    font-size: 10px;
+    color: red;
+}
+
+button{
+    cursor: pointer;
+}
